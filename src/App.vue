@@ -1,32 +1,52 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="header">
+      <ul>
+        <li><a href="javascript:;">HOME</a></li>
+        <li><a href="javascript:;">登录</a></li>
+        <li><a href="javascript:;">注册</a></li>
+        <li><a href="javascript:;">用户</a></li>
+      </ul>
     </div>
-    <router-view />
+
+    <div class="main">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  .header{
+    height: 60px;
+    background-color: #151c31;
+    box-shadow: 0 1px 2px #999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    ul{
+      display: flex;
+      color: #57697e;
+      li{
+        width: 60px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 13px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        margin-right: 16px;
+      }
     }
   }
-}
+
 </style>
+
+<script>
+  import "./assets/resrt.css"
+
+  export default {
+    name: 'App'
+  }
+</script>
